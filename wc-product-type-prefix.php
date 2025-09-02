@@ -20,6 +20,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+/**
+ * Main plugin class.
+ * This class is responsible for initializing the plugin.
+ */
 class WC_Product_Type_Prefix {
 	/**
 	 * Plugin version.
@@ -138,7 +142,7 @@ class WC_Product_Type_Prefix {
 	 * @return string Product type label.
 	 */
 	private function get_product_type_label( $product ): string {
-		$product_type  = $product->get_type();
+		$product_type = $product->get_type();
 
 		return ucfirst( $product_type );
 	}
